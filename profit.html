@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>利润计算页面</title>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="index.html">首页 <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="profit.html">利润计算</a>
+                <a class="nav-item nav-link" href="inventory.html">库存计算</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body>
+
+
+    <h1>利润计算</h1>
+
+    <form class="needs-validation" novalidate>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">引流</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="yl" placeholder="引流占 实际收款 的百分比" value="15" required>
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">%</span>
+                    </div>
+
+                    <div class="valid-feedback">
+                        ok!
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">导购</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="dg" placeholder="导购提成 实际收款 的百分比" value="10" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">%</span>
+                    </div>
+                    <div class="valid-feedback">
+                        ok!
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">平均(店内出售时)折扣</label>
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="pjzk" placeholder="吊牌价 的平均折扣（如7.5折填：75）"
+                        aria-describedby="inputGroupPrepend" required>
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">折</span>
+                    </div>
+
+                    <div class="invalid-feedback">
+                        别忘了填这个！
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom03">拿货折扣</label>
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="nhzk" placeholder="吊牌价 的拿货折扣（如2.5折填：25）" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">折</span>
+                    </div>
+                    <div class="invalid-feedback">
+                        别忘了2.5折要写25！3折要写30！
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04">基础工资</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="jcgz" placeholder="如5000元/月填：5000" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">元/月</span>
+                    </div>
+                    <div class="invalid-feedback">
+                        要写正确的钱的格式！
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04">店内（员工）人数</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="dnrs" placeholder="如10个人一个店填：10" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">人</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom04">租金（每月）</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="zj" placeholder="如30000元/月填：30000" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">元/月</span>
+                    </div>
+                    <div class="invalid-feedback">
+                        要写正确的钱的格式！
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-3 mb-2">
+                <label for="validationCustom05">目标毛利率</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="raw" placeholder="可不填">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    我都按照要求填写了
+                </label>
+                <div class="invalid-feedback">
+                    请好好确认！
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="button" id='calButton'>开始计算</button>
+    </form>
+
+    <div class="card border-success mb-3" style="max-width: 30rem;">
+        <div class="card-header bg-transparent border-success">结果如下</div>
+        <div class="card-body text-success">
+            <h5 class="card-title">本月需要营业额：</h5>
+            <p class="card-text" id='result1'></p>
+            <p class="card-text" id='result2'></p>
+            <p class="card-text" id='result3'></p>
+            <p class="card-text" id='result4'></p>
+        </div>
+        <class="card-footer bg-transparent border-success> 毛利润：实际收银额 - 员工工资/提成和引流分成 - 进货成本 - 店铺租金
+            </br>我对20%的毛利润的定义: （营业额 - 总成本） / 营业额 = 20%
+            </br>毛利润还需要减去库存的钱！
+
+    </div>
+    </div>
+
+    <script src='profit.js'></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
